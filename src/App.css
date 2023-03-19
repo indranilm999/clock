@@ -1,38 +1,116 @@
-.App {
-  text-align: center;
-}
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.clock{
+  width:550px;
+  height: 550px;
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
+  background: url(c1.PNG);
+  background-size: cover;
+  border:4px solid
+}
+.clock:before{
+  content:'';
+  position:absolute;
+  width:15px;
+  height:15px;
+  background:#fff;
+  border-radius:50%;
+  z-index:10000;
 }
 
-.App-link {
-  color: #61dafb;
+.clock .hour,
+.clock .min,
+.clock .sec
+{
+  position:absolute;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.clock .hour, .hr 
+{
+  width:160px;
+  height:140px;
+}
+
+.clock .min, .mn 
+{
+  width:190px;
+  height:180px;
+}
+
+.clock .sec, .sc 
+{
+  width:230px;
+  height:10px;
+}
+
+.hr,.mn,.sc{
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  border-radius: 50%;
+}
+
+.hr:before{
+  content:'';
+  position:absolute;
+  width:8px;
+  height:70px;
+  background: #ff105e;
+  z-index:10;
+  border-radius:6px 6px 0 0 ;
+}
+
+.mn:before{
+  content:'';
+  position:absolute;
+  width:4px;
+  height:95px;
+  background: #fff;
+  z-index:11;
+  border-radius:6px 6px 0 0 ;
+}
+
+.sc:before{
+  content:'';
+  position:absolute;
+  width:2px;
+  height:110px;
+  background: #fff;
+  z-index:12;
+  border-radius:6px 6px 0 0 ;
+}
+
+:root{
+  --clr-neon:hsl(317 100% 54%);
+  --clr-bg:hsl(323 21% 16%);
+}
+.watch1{
+  font-size: 1.5rem;;
+  display: inline-block;
+  color:var(--clr-neon);
+  /* border:var(--clr-neon) 0.125em solid; */
+  padding:0.25em 1em;
+  font-family: "Balsamiq Sans", cursive;
+  text-decoration: none;
+  border: currentColor 0.125em solid;
+  border-radius: 0.25em;
+  text-shadow: 
+  0 0 0.125em hsl(0 0% 100% / 0.5),
+  0 0 0.45em currentColor;
+
+  box-shadow: inset 0 0 0.5em 0 var(--clr-neon), 0 0 0.5 0 var(--clr-neon);
+
+
+  position: relative;
+  left: 600px;
+  top: 200px;
+  
+  width: 300px;
+  
+ 
+}
+
+.background{
+  background-color: black;
 }
